@@ -12,23 +12,16 @@ pkg install hydra
 clear
 #
 #
-#BANNER
-echo "###################################"
-echo "=          BRUTE-FORCE            ="
-echo "=           COM HYDRA             ="
-echo "=                                 ="
-echo "=             2018                ="
-echo "##################################"
-echo
 #
+figlet Hydra
 #
 #MENU
 echo "======================================"
-echo "=   \033[1;34m[\033[1;31m1]>> \033[1;33mINVADIR ROTEADOR \033[1;36m"
-echo "=   \033[1;34m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
-echo "=   \033[1;34m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
-echo "=   \033[1;34m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
-echo "=   \033[1;34m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
+echo "=   \033[1;33m[\033[1;31m1]>> \033[1;33mINVADIR ROTEADOR \033[1;36m"
+echo "=   \033[1;33m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
+echo "=   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
+echo "=   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
+echo "=   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
 echo "======================================"
 echo
 #
