@@ -20,7 +20,7 @@ echo "======================================"
 echo "   \033[1;33m[\033[1;31m1]>> \033[1;33mINVADIR ROTEADOR \033[1;36m"
 echo "   \033[1;33m[\033[1;31m2]>> \033[1;33mINVADIR GMAIL \033[1;36m"
 echo "   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
-echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOOL \033[1;36m"
+echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOO \033[1;36m"
 echo "   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
 echo "   \033[1;33m[\033[1;31m6]>> \033[1;33mINVADIR OUTLOOK \033[1;36m"
 #
